@@ -170,30 +170,47 @@ const returnRemovedCall = () => {
 
     if (document.body.style.cursor.includes("stone") && storeObject.stone > 0) {
       event.target.classList.add("stone");
-      storeObject.stone--;
+      storeObject.stone--;if(storeObject.stone==0){
+                document.body.style.cursor = `auto`;
+
+      }
     }
+
 
     if (document.body.style.cursor.includes("grass") && storeObject.grass > 0) {
       event.target.classList.add("grass");
-      storeObject.grass--;
+      storeObject.grass--;if(storeObject.grass==0){
+                document.body.style.cursor = `auto`;
+
+      }
     }
 
     if (document.body.style.cursor.includes("dirt") && storeObject.ground > 0) {
       event.target.classList.add("ground");
-      storeObject.ground--;
+      storeObject.ground--;if(storeObject.ground==0){
+                document.body.style.cursor = `auto`;
+
+      }
     }
 
     if (document.body.style.cursor.includes("oak-leaves") && storeObject.bush > 0) {
       event.target.classList.add("bush");
-      storeObject.bush--;
+      storeObject.bush--;if(storeObject.bush==0){
+                document.body.style.cursor = `auto`;
+
+      }
     }
 
     if (document.body.style.cursor.includes("wood1") && storeObject.trunk > 0) {
       event.target.classList.add("trunk");
-      storeObject.trunk--;
+      storeObject.trunk--;if(storeObject.trunk==0){
+                document.body.style.cursor = `auto`;
+
+      }
     }
 
-    storeRemovedCell("", storeObject);
+    storeRemovedCell();
+
   });
 };
 
